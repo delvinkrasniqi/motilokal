@@ -1,0 +1,21 @@
+.menu-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .menu-items{
+            display: flex;
+            gap: 20px;
+            li{
+                a{
+                    
+                }
+            }
+        }
+    }
+}

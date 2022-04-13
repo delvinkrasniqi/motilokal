@@ -1,0 +1,26 @@
+.page-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  
+  @media (min-width: 576px) {
+    .page-container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .page-container {
+      max-width: 720px;
+      
+    }
+    
+  }
+  @media (min-width: 992px) {
+    .page-container {
+      max-width: 1200px;
+    }
+  }
