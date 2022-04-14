@@ -16,3 +16,24 @@ a{
 p{
     font-size: 15px;
 }
+
+.top-header{
+    position: relative;
+    overflow: hidden;
+}
+#sky, #mountain-front, #mountain-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#sky{
+    background-image: url(../images/sky.png);
+}
+#mountain-front{
+    background-image: url(../images/mountain-front.png);
+}
+#mountain-back{
+    background-image: url(../images/mountain-back.png);
+}

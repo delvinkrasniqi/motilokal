@@ -1,0 +1,19 @@
+footer {
+    padding: 30px 0;
+    p,a{
+        color: #6F7484;
+    }
+    a{
+        text-decoration: underline;
+        font-weight: 400;
+    }
+    .socials {
+        padding: 20px 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .bottom{
+        display: flex;
+        justify-content: space-between;
+    }
+}

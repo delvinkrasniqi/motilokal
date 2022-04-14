@@ -7,6 +7,10 @@
     <title>Motilokal.com</title>
     <link rel="stylesheet" href="./assets/styles/main.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
 </head>
 <body>
     <?php include("menu.php") ;?>

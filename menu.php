@@ -2,9 +2,9 @@
     <div class="page-container">
         <div class="menu">
             <div class="logo">
-                <h2>motilokal</h2>
+                <a href="./index.php"><img src="./assets/images/motilokal.svg" alt="motilokal-logo" id="header-logo"></a>
             </div>
-            <ul class="menu-items">
+            <!-- <ul class="menu-items">
                 <li>
                     <a href="#">Shqiperi</a>
                 </li>
@@ -18,12 +18,15 @@
                     <a href="#">Bote</a>
                 </li>
                 <li>
-                    <a href="#">motilokal</a>
+                    <a href="#"><img src="./assets/images/motilokaltv.svg" alt=""></a>
                 </li>
                 <li>
                     <a href="#">Marketing</a>
                 </li>
-            </ul>
+            </ul> -->
+            <div id="toggler">
+                <i class='bx bx-menu-alt-right'></i>
+            </div>
         </div>
     </div>
 </nav>

@@ -1,0 +1,24 @@
+.ads-block{
+    max-width: 900px;
+    height: 100px;
+    margin: 50px auto;
+    background-color: #cacaca;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        font-size: 25px;
+    }
+}
+.ad-block{
+    height: 100%;
+    background: #cacaca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    p{
+        font-size: 18px;
+        color: black;
+    }
+}
