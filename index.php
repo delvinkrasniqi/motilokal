@@ -3,13 +3,14 @@
     <div class="page-container" style="position:relative; z-index:2">
         <div class="search-wrapper">
             <div class="search-bar">
-                <input type="text" id="search-location" name="search" placeholder="Kërko qytetin tuaj..">
+            <input autocomplete="off" name="hidden" type="text" style="display:none;">
+                <input autocomplete="off" type="text" id="search-location" name="search" placeholder="Kërko qytetin tuaj..">
 
                 <button class="submit-btn"><i class='bx bx-search'></i></button>
             </div>
             <div class="autocomplete-wrapper">
-                <span>Prizren, Kosove</span>
-                <span>Prishtine, Kosove</span>
+                <!-- <span>Prizren, Kosove</span>
+                <span>Prishtine, Kosove</span> -->
             </div>
         </div>
         <div class="recent-locations">

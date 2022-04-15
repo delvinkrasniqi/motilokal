@@ -1,13 +1,16 @@
+
+
 main.single-video {
     .top {
         background-color: #1D2D60;
         padding: 100px 0 50px 0;
+
         .video-item {
             .item-details {
                 h3.item-title {
                     color: white;
                 }
-    
+
                 .item-meta {
                     span {
                         color: white;
@@ -24,30 +27,45 @@ main.single-video {
         align-items: flex-start;
 
         .watch-next-videos {
-            max-height: 600px;
+            // max-height: 600px;
             height: 100%;
-            .swiper, .swiper-wrapper{
-                height: 100%;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            overflow: auto;
+            padding-right: 10px;
+
+          
+
+            // .swiper, .swiper-wrapper{
+            //     height: 100%;
+            // }
+            .ad-block{
+                height: auto;
             }
         }
     }
 
-  
-    .video-player{
-        .video-item{
-            .item-details{
+
+    .video-player {
+        .video-item {
+            .item-details {
                 margin-top: 10px;
-                h3.item-title{
+
+                h3.item-title {
                     font-size: 22px;
                 }
-                .item-meta{
+
+                .item-meta {
                     justify-content: flex-start;
                     gap: 4px;
                     align-items: center;
-                    span{
+
+                    span {
                         font-size: 14px;
-                        & ~ span{
-                            &::before{
+
+                        &~span {
+                            &::before {
                                 content: '-';
                                 display: inline-block;
                                 margin-right: 4px;
@@ -58,5 +76,42 @@ main.single-video {
             }
         }
     }
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
 
+@media(max-width:991px){
+    main.single-video{
+        .video-wrapper-top{
+            grid-template-columns: 1fr;
+            .watch-next-videos{
+                padding: 0;
+                max-width: 690px;
+                flex-wrap: nowrap;
+                padding-bottom: 30px;
+                .video-item{
+                    min-width: calc(33.33% - 20px);
+                }
+                .ad-block{
+                    min-width: calc(33.33% - 20px);
+                }
+            }
+        }
+    }
 }

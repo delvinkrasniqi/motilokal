@@ -7,25 +7,12 @@
                     <?php include("video-item.php"); ?>
                 </div>
                 <div class="watch-next-videos">
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <?php include("video-item.php"); ?>
-                            </div>
-                            <div class="swiper-slide">
-                                <?php include("video-item.php"); ?>
-                            </div>
-                            <div class="swiper-slide">
-                                <?php include("video-item.php"); ?>
-                            </div>
-                            <div class="swiper-slide">
-                                <?php include("video-item.php"); ?>
-                            </div>
-                        </div>
-
-                    </div>
-
+                    <?php include("video-item.php"); ?>
+                    <?php include("ad-square.php"); ?>
+                    <?php include("video-item.php"); ?>
+                    <?php include("video-item.php"); ?>
+                    <?php include("video-item.php"); ?>
+                    <?php include("video-item.php"); ?>
                 </div>
             </div>
         </div>
@@ -50,5 +37,11 @@
         </div>
     </div>
 </main>
-<?php include("footer.php"); ?>
 
+<script>
+let videoPlayerWrapper = document.querySelector(".video-player");
+let watchNext = document.querySelector(".watch-next-videos");
+watchNext.style.maxHeight = `${videoPlayerWrapper.offsetHeight}px`;
+</script>
+
+<?php include("footer.php"); ?>
