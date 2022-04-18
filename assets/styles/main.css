@@ -150,6 +150,11 @@ p {
   transition: .2s ease;
 }
 
+.menu-wrapper.filled {
+  background: #1d2d60 !important;
+  padding: 10px 0;
+}
+
 .menu-wrapper.active #toggler i {
   color: #1D2D60;
 }
@@ -614,11 +619,19 @@ main.single-video .top {
   padding: 100px 0 50px 0;
 }
 
-main.single-video .top .video-item .item-details h3.item-title {
+main.single-video .top video {
+  width: 100%;
+}
+
+main.single-video .top .item-details {
+  margin-top: 20px;
+}
+
+main.single-video .top .item-details h3.item-title {
   color: white;
 }
 
-main.single-video .top .video-item .item-details .item-meta span {
+main.single-video .top .item-details .item-meta span {
   color: white;
 }
 
@@ -693,6 +706,48 @@ main.single-video ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
+#video-player {
+  position: relative;
+}
+
+#reklama {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+#reklama img {
+  width: 100%;
+  height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.close-ad {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.close-ad p {
+  color: white;
+}
+
 @media (max-width: 991px) {
   main.single-video .video-wrapper-top {
     -ms-grid-columns: 1fr;
@@ -711,6 +766,10 @@ main.single-video ::-webkit-scrollbar-thumb:hover {
   main.single-video .video-wrapper-top .watch-next-videos .ad-block {
     min-width: calc(33.33% - 20px);
   }
+}
+
+main.archive {
+  padding-top: 70px;
 }
 
 footer {

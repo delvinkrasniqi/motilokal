@@ -42,7 +42,7 @@
         <div class="section">
             <div class="section-title">
                 <h2>Video nga motilokal</h2>
-                <a href="#">më shumë</a>
+                <a href="archive.php">më shumë</a>
             </div>
             <?php include("video-grid.php"); ?>
         </div>
@@ -50,7 +50,7 @@
         <div class="section" style='padding-bottom: 100px;'>
             <div class="section-title">
                 <h2>LIVE Video</h2>
-                <a href="#">më shumë</a>
+                <a href="archive.php">më shumë</a>
             </div>
             <?php include("live-grid.php"); ?>
         </div>

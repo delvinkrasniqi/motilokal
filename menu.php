@@ -1,4 +1,5 @@
-<nav class="menu-wrapper">
+
+<nav class="menu-wrapper <?php echo $currentPage == 'archive.php' ? 'filled':'' ;?>">
     <div class="page-container">
         <div class="menu" style="position:relative; z-index:2">
             <div class="logo">

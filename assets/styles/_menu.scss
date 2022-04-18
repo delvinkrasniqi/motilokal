@@ -38,6 +38,10 @@
     transition: .2s ease;
 }
 
+.menu-wrapper.filled{
+    background: #1d2d60 !important;
+    padding: 10px 0;
+}
 .menu-wrapper.active {
     #toggler {
         i {
