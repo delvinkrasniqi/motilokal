@@ -4,7 +4,7 @@
         <div class="section" style='padding-bottom: 100px;'>
             <div class="section-title">
                 <h2>Të gjitha</h2>
-                <p>Radhit sipas</p>
+                <!-- <p>Radhit sipas</p> -->
             </div>
             <?php include("video-grid.php"); ?>
             <?php include("ad-banner.php"); ?>

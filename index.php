@@ -33,7 +33,7 @@
     <div id="sky"></div>
     <div id="mountain-back"></div>
     <div id="mountain-front"></div>
-
+    <div id="shkembi"></div>
 </div>
 <main class="home">
     <div class="page-container">
@@ -41,7 +41,8 @@
 
         <div class="section">
             <div class="section-title">
-                <h2>Video nga motilokal</h2>
+                <!-- <h2>Video nga motilokal</h2> -->
+                <img src="./assets/images/motilokaltv.svg" alt="">
                 <a href="archive.php">më shumë</a>
             </div>
             <?php include("video-grid.php"); ?>

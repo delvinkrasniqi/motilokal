@@ -8,18 +8,25 @@
                     <div id="video-player">
                         <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
                             <source src="./video.mp4" type="video/mp4" />
-                            <source src="./video.webm" type="video/webm" />
+                            <source src="./video.mp4" type="video/webm" />
 
                             <!-- Captions are optional -->
                             <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en"
                                 default />
                         </video>
+                        <!-- <div class="plyr__video-embed" id="player">
+                   
+                            <iframe
+                                src="https://www.youtube.com/embed/Dx5qFachd3A?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                allowfullscreen allowtransparency allow="autoplay"></iframe>
+                        </div> -->
 
-                        <div id="reklama" style="background-image: url(./assets/images/video-ad.png)"
-                            onclick="window.href.location='https://google.com'">
+                        <div id="reklama" style="background-image: url(./assets/images/video-ad.png)">
                             <div class="close-ad" onclick="hideAd()">
                                 <p>Largo Reklamën</p>
                             </div>
+                            <a href="https://motilokal.com/marketing" target="_blank"><span
+                                    class="ad-redirect"></span></a>
                         </div>
 
                     </div>
@@ -67,6 +74,9 @@
 let videoPlayerWrapper = document.querySelector(".video-player");
 let watchNext = document.querySelector(".watch-next-videos");
 watchNext.style.maxHeight = `${videoPlayerWrapper.offsetHeight}px`;
+window.addEventListener("resize", () => {
+    watchNext.style.maxHeight = `${videoPlayerWrapper.offsetHeight}px`;
+})
 </script>
 
 <script src="https://cdn.plyr.io/3.6.12/plyr.polyfilled.js"></script>
@@ -76,9 +86,8 @@ const player = new Plyr('#player');
 let videoPlayer = document.querySelector(".plyr__video-wrapper");
 
 let videoDuration = 0;
-let isVideoPlaying = false;
-
 let inVideoAd = document.querySelector("#reklama");
+
 
 const toggleAd = () => {
     player.pause();
@@ -91,25 +100,36 @@ const hideAd = () => {
 }
 
 window.addEventListener("load", () => {
+    let adFrequency = [];
+
     videoDuration = player.duration;
-    let random = Math.floor(Math.random() * videoDuration);
+    for (let i = 0; i < videoDuration; i++) {
+        if (i % videoDuration == 0) {
+            let random = Math.floor(Math.random() * videoDuration);
+            adFrequency.push(random);
+            console.log(adFrequency);
+        }
+    }
     console.log("Video length: " + videoDuration);
-    console.log("Random :", random);
 
     let currentTime;
-
-    let timePassed = 0;
     let adInterval = setInterval(() => {
-        timePassed++;
         currentTime = player.currentTime;
-        console.log(Math.floor(currentTime))
+        console.log("Inside Interval", {
+            currentTime: Math.floor(currentTime),
+            videoDuration: videoDuration
+        })
         if (player.playing) {
-            if (Math.floor(currentTime) == random) {
+            let foundItem = adFrequency.find(el => el == Math.floor(currentTime));
+            if (foundItem) {
                 toggleAd();
+                adFrequency[adFrequency.indexOf(foundItem)] = -1;
+                console.log(adFrequency);
             }
-            if (timePassed > videoDuration) {
-                clearInterval(adInterval);
-            }
+        }
+        if (currentTime == videoDuration) {
+            clearInterval(adInterval);
+            console.log("Intervali u nal")
         }
     }, 1000);
 

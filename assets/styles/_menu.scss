@@ -160,3 +160,20 @@
     transform: translateY(0);
     transition: .4s ease;
 }
+
+body.fixed .menu-wrapper{
+    background-color: white;
+}
+body.fixed .menu{
+    background-color: white;
+}
+body.fixed .menu::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    width: calc(100% + 26px);
+    height: 60px;
+    background: white;
+    z-index: -1;
+}

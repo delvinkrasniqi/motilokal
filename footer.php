@@ -19,7 +19,7 @@
         <div class="bottom">
             <p>Në partneritet me <a href="yr.no">YR.no</a> <a href="#">Politika e privatësisë</a></p>
             <div class="copyright">
-                Motilokal.com © 2022
+                <p>Motilokal.com © 2022</p>
             </div>
         </div>
     </div>

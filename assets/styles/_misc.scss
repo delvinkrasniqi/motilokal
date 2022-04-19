@@ -25,7 +25,7 @@ p{
     position: relative;
     overflow: hidden;
 }
-#sky, #mountain-front, #mountain-back{
+#sky, #mountain-front, #mountain-back, #shkembi{
     position: absolute;
     top: 0;
     left: 0;
@@ -40,4 +40,26 @@ p{
 }
 #mountain-back{
     background-image: url(../images/mountain-back.png);
+}
+#shkembi{
+    background-image: url(../images/shkembi.png);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1D2D60;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
