@@ -134,19 +134,20 @@ if (searchInput) {
 </script>
 
 <script>
-let sky = document.querySelector("#sky");
-let mountainBack = document.querySelector("#mountain-back");
-let mountainFront = document.querySelector("#mountain-front");
+let firstLayer = document.querySelector("#first-layer");
+let secondLayer = document.querySelector("#second-layer");
+let thirdLayer = document.querySelector("#third-layer");
+
 let singleVideoTop = document.querySelector(".single-video .top");
 
 window.addEventListener("scroll", () => {
 
     let scrollValue = window.scrollY;
 
-    if (sky && mountainBack && mountainFront) {
-        sky.style.top = scrollValue * 0.1 + 'px';
-        mountainBack.style.top = scrollValue * 0.5 + 'px';
-        mountainFront.style.top = scrollValue * 0.3 + 'px';
+    if (firstLayer && secondLayer && thirdLayer) {
+        firstLayer.style.top = scrollValue * 0.6 + 'px';
+        secondLayer.style.top = scrollValue * 0.4 + 'px';
+        thirdLayer.style.top = scrollValue * 0.2 + 'px';
     }
 
     let opacityValue = (500 - scrollValue / 0.5) / 500;

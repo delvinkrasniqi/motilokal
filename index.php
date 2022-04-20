@@ -30,10 +30,10 @@
             </div>
         </div>
     </div>
-    <div id="sky"></div>
-    <div id="mountain-back"></div>
-    <div id="mountain-front"></div>
-    <div id="shkembi"></div>
+    <div id="first-layer"></div>
+    <div id="second-layer"></div>
+    <div id="third-layer"></div>
+    <div id="fourth-layer"></div>
 </div>
 <main class="home">
     <div class="page-container">
